@@ -3,14 +3,22 @@ package com.bridgelabz.demojava;
 import java.util.Scanner;
 
 public class PatternProgram {
-
+    static Scanner scanner = new Scanner(System.in);
     public void squarePattern() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter no");
         int n = scanner.nextInt();
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+    }
+
+    public void triangleStar() {
+        System.out.println("Enter row ");
+        int row = scanner.nextInt();
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= i; j++)
                 System.out.print("*");
             System.out.println();
         }
@@ -20,5 +28,6 @@ public class PatternProgram {
             System.out.println("added square pattern");
             PatternProgram object = new PatternProgram();
             object.squarePattern();
+            object.triangleStar();
         }
     }
